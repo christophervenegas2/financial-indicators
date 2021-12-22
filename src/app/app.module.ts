@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -14,6 +15,7 @@ import { DialogValueIndicatorComponent } from './dialog-value-indicator/dialog-v
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { HeaderComponent } from './header/header.component';
     HeaderComponent
   ],
   imports: [
+    MatTooltipModule,
+    MatIconModule,
     MatTableModule,
     MatDialogModule,
     MatButtonModule,

@@ -74,7 +74,13 @@ export class ChartsComponent implements OnInit {
   // public lineChartPlugins = [pluginAnnotations];
   tableData;
   chartValue;
+  actualValue;
+  pastMonthValue;
   data;
+  actualDate;
+  pastMonthDate;
+  resultValuesDiff;
+  isGreater: boolean;
 
   @ViewChild(BaseChartDirective, {static: true}) chart: BaseChartDirective;
 
@@ -82,9 +88,33 @@ export class ChartsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getAllActualValues();
     this.getData(this.typeData);
+    this.typeData = this.typeData.toUpperCase().replace('_', ' ');
+  }
+
+  private getAllActualValues() {
     this.ChartService.getProgressChartData().subscribe((res) => {
       this.data = res;
+      this.actualValue = this.data[this.typeData.toLowerCase().replace(' ', '_')]?.valor
+      this.actualDate = moment(this.data[this.typeData.toLowerCase().replace(' ', '_')]?.fecha).format('DD-MM-YYYY')
+      this.pastMonthDate = moment(this.data[this.typeData.toLowerCase().replace(' ', '_')]?.fecha).subtract(1, 'months').format('DD-MM-YYYY')
+      this.getPastValues(this.typeData.toLowerCase().replace(' ', '_'), this.pastMonthDate)
+    })
+  }
+
+  private getPastValues(typeData: string, date: string) {
+    this.ChartService.getChartValuePastMonth(typeData, date).subscribe((res) => {
+      this.data = res;
+      this.pastMonthValue = this.data.serie[0].valor;
+      this.resultValuesDiff = this.actualValue - this.pastMonthValue;
+      if (this.resultValuesDiff > 0) {
+        //aumento el valor
+        this.isGreater = true;
+      } else {
+        //disminuyo el valor
+        this.isGreater = false;
+      }
     })
   }
 

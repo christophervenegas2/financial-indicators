@@ -26,6 +26,12 @@ export class ChartService {
       catchError(this.handleError<ValueChartData>('getProgressChartData', undefined)));
   }
 
+  getChartValuePastMonth(apiRoute: string, month: string): Observable<ValueChartData> {
+    return this.http.get<ValueChartData>(Constants.API_URL + "/" + apiRoute + "/" + month).pipe(
+      retry(3),
+      catchError(this.handleError<ValueChartData>('getProgressChartData', undefined)));
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: HttpErrorResponse): Observable<T> => {
       this.logger.debug(`${operation} failed: ${error.message}`);

@@ -1,6 +1,6 @@
 <div class="container-graphs">
       <div class="title">
-        <h1>{{typeData.toUpperCase().replace('_', ' ')}}</h1>
+        <h1>{{typeData}}</h1>
       </div>
       <div class="canva">
         <canvas baseChart
@@ -13,6 +13,13 @@
         </canvas>
       </div>
       <div class="button">
+        <div class="value">
+          <div class="text">
+            <h2>Valor Actual: </h2>
+            <h2>${{actualValue}}</h2>
+          </div>
+          <mat-icon [matTooltip]="isGreater ? 'El valor aumento respecto al mes anterior' : 'El valor disminuyo respecto al mes anterior'" [ngStyle]="{'color': isGreater ? 'green' : 'red'}" >{{isGreater ? 'arrow_upward' : 'arrow_downward'}}</mat-icon>
+        </div>
         <button mat-stroked-button color="primary" (click)="openDialog()"> Mostrar Tabla </button>
       </div>
 </div>
