@@ -8,9 +8,11 @@ This challenge was presented by the Miningtag development team in which it consi
 
 Este proyectos esta en base hecho por el framework Angular en su version 11.2.8. Y haciendo uso de su libreria de estilos llamada Angular Materials.
 Para la creacion de los graficos use Chart.js que es una libreria de javascript que permite la creacion de varios graficos. Esta dependencia ya la habia usado antes por lo que se me hizo mas rapida y sencilla de manejar.
+El sitio web es responsivo para celulares como computadoras, no para tablets ya que no lo encontre necesario y tampoco poseia de mas tiempo libre.
 
 This project is based on the Angular framework in its version 11.2.8. And making use of its style library called Angular Materials.
 To create the graphs use Chart.js which is a javascript library that allows the creation of various graphs. I had used this dependency before so it made it faster and easier for me to handle.
+The website is responsive for cell phones such as computers, not for tablets since I did not find it necessary and I did not have more free time.
 
 ## Pasos para la ejecucion del sitio web / Steps for the execution of the website
 
