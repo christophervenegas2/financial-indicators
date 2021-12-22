@@ -18,9 +18,7 @@ export class DialogValueIndicatorComponent implements OnInit {
   ngOnInit(): void {
     this.title = this.data.type.replace('_', ' ');
     this.dataSource = this.data.element.sort((a, b) => moment(b.fecha).diff(moment(a.fecha)));
-    console.log(this.dataSource);
     this.dataSource = this.dataSource.slice(0, 10);
-    console.log(this.dataSource);
 
   }
 
