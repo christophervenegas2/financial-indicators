@@ -20,7 +20,7 @@ Regarding the added challenge, implement a comfortable and pleasant way to know 
 
 1. git clone https://github.com/christophervenegas2/financial-indicators.git
 2. git pull
-3. npm i --legacy-peer-deps
+3. npm install --legacy-peer-deps
 4. npm start
 
 ## Test unitarios / Unit Tests
