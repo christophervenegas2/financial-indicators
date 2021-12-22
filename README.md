@@ -1,27 +1,34 @@
-# ChristopherVenegasMiningtag
+# Technical test Frontend MiningTag Developer / Prueba técnica Desarrollador Frontend MiningTag
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
+Este desafio fue presentado por el equipo de desarrollo de Miningtag en los cuales consta de la creacion de graficos y tablas en las que se puedan visualizar indicadores financieros atraves del tiempo.
 
-## Development server
+This challenge was presented by the Miningtag development team in which it consists of the creation of graphs and tables in which financial indicators can be visualized over time.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Content / Contenido
 
-## Code scaffolding
+Este proyectos esta en base hecho por el framework Angular en su version 11.2.8. Y haciendo uso de su libreria de estilos llamada Angular Materials.
+Para la creacion de los graficos use Chart.js que es una libreria de javascript que permite la creacion de varios graficos. Esta dependencia ya la habia usado antes por lo que se me hizo mas rapida y sencilla de manejar.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project is based on the Angular framework in its version 11.2.8. And making use of its style library called Angular Materials.
+To create the graphs use Chart.js which is a javascript library that allows the creation of various graphs. I had used this dependency before so it made it faster and easier for me to handle.
 
-## Build
+## Steps for the execution of the website / Pasos para la ejecucion del sitio web
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. git clone https://github.com/christophervenegas2/financial-indicators.git
+2. git pull
+3. npm i --legacy-peer-deps
+4. npm start
 
-## Running unit tests
+## Unit Tests / Test unitarios
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+No se realizaron tests unitarios.
 
-## Running end-to-end tests
+Unit tests were not performed.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Ending / Finalizando
 
-## Further help
+Para terminar debo decir que es mi primera vez que me he sentido tan atraido en un test de ingreso ya que por lo general en algunas empresas son muy simples y en esta fue mas compleja pero muy entendible de lo que se buscaba. Y en todo momento en el que no estubiese frente al pc lo estaba usando en como enfrentar el problema y me encanto.
+Espero que les haya encantado mi proyecto y esto atento a su pronta respuesta.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To finish, I must say that it is my first time that I have been so attracted to an entrance test since generally in some companies they are very simple and in this one it was more complex but very understandable than what was sought. And at all times when I was not in front of the pc I was using it in how to face the problem and I loved it.
+I hope you have loved my project and I am attentive to your prompt response.
