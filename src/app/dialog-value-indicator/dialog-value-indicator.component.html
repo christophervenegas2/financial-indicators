@@ -1,0 +1,18 @@
+<div class="container-table">
+  <h1>Indicador de: {{title.toUpperCase()}}</h1>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="fecha">
+      <th mat-header-cell *matHeaderCellDef> FECHA </th>
+      <td mat-cell *matCellDef="let element"> {{element.fecha | date: 'shortDate'}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="valor">
+      <th mat-header-cell *matHeaderCellDef> VALOR {{title.toUpperCase()}}</th>
+      <td mat-cell *matCellDef="let element"> ${{element.valor}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

@@ -1,0 +1,22 @@
+@import '~@angular/material/theming'
+@import "css/palettes/electricblue.palette.scss"
+
+@include mat-core()
+
+$ng-default-primary: mat-palette($md-electricblue, )
+$ng-default-accent: mat-palette($md-electricblue, 300, 600, 700)
+$ng-default-warn: mat-palette($md-electricblue)
+$ng-default-theme: mat-light-theme($ng-default-primary, $ng-default-accent, $ng-default-warn)
+@include angular-material-theme($ng-default-theme)
+
+.dialog-responsive
+  width: 40%
+  height: 68%
+
+@media only screen and (max-width: 400px)
+  .dialog-responsive
+    width: 90%
+    height: 81%
+
+body
+  overflow-x: hidden

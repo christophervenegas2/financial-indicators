@@ -1,0 +1,18 @@
+<div class="container-graphs">
+      <div class="title">
+        <h1>{{typeData.toUpperCase().replace('_', ' ')}}</h1>
+      </div>
+      <div class="canva">
+        <canvas baseChart
+          [datasets]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType">
+        </canvas>
+      </div>
+      <div class="button">
+        <button mat-stroked-button color="primary" (click)="openDialog()"> Mostrar Tabla </button>
+      </div>
+</div>
